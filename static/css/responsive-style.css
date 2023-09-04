@@ -1,0 +1,69 @@
+/*Media Query 1170px*/
+
+@media (max-width: 1170px) {
+    /*General css*/
+    .section-title{
+        max-width: 60%;
+    }
+
+    /*02 Banner section*/
+    .banner_section .carousel-item{
+        height: 90vh;
+    }
+}
+
+/*Media Query 991px*/
+
+@media (max-width: 991px) {
+
+    /*General css*/
+    .about .banner_section,
+    .courses .banner_section,
+    .contact .banner_section {
+        padding-top: 12.5rem;
+        padding-bottom: 3rem;
+    }
+
+    /*01 Navbar css*/
+    .header .navbar{
+        background-size: cover;
+        padding: 2rem;
+    }
+    .header .navbar-nav{
+        margin-top: 2rem;
+    }
+    .header .navbar-nav .nav-link{
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/*Media Query 767px*/
+@media (max-width: 767px) {
+
+    /*General css*/
+    body,html{
+        font-size: 8px;
+    }
+    .section-subtitle{
+        max-width: 80%;
+    }
+
+    /*Banner section*/
+    .banner_section{
+        min-height: 70vh;
+    }
+
+    .banner_section .carousel-item{
+        height: 70vh;
+    }
+}
+
+/*Media Query 590px*/
+@media (max-width: 590px) {
+
+    /*General css*/
+    body,html{
+        font-size: 7px;
+    }
+}
