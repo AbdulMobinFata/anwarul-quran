@@ -18,6 +18,7 @@
 :root{
     /*Background Color*/
     --bg-white: #ffff;
+    --bg-dark-color: #03262c;
 
     /*Text Colors*/
     --primary-text: #061738;
@@ -36,7 +37,7 @@ body,
 html{
     color: var(--primary-text);
     font-size: 10px;
-    font-weight: 400;
+    font-weight: bold;
     font-family: var(--primary-font);
     scroll-behavior: smooth;
     line-height: 1.5;
@@ -56,11 +57,11 @@ h1{
     font-size: 9rem;
     line-height: 1.4;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 h2{
-    color: var(--primary-color);
+    color: var(--primary-text);
     font-size: 4.7rem;
     font-weight: 600;
     display: inline-block;
@@ -126,7 +127,7 @@ a:hover,
 button:hover{
     -webkit-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3 ease-in;
+    -moz-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
 
@@ -145,22 +146,18 @@ button:hover{
 .main-btn{
     position: relative;
     color: var(--bg-white);
-    background: linear-gradient(to right, #0f7404, #5cb917);
+    background: var(--secondry-color);
     z-index: 1;
     overflow: hidden;
-    border: 0.2rem solid var(--bg-white);
     border-radius: 3.5rem;
-    padding: 1rem 3.5rem;
-    font-weight: 600;
-    font-size: 1.8rem;
-    margin-top: 1.5rem;
-    letter-spacing: 0.2rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .main-btn:hover{
     background: var(--bg-white);
     color: var(--secondry-color);
-    border: 0.2rem solid var(--secondry-color);
 }
 
 section{
@@ -183,10 +180,10 @@ section{
     margin-bottom: 1.5rem;
 }
 
-.about .banner_section,
-.courses .banner_section,
-.contact .banner_section{
-    background: url("../images/banner-slide/top-banner.jpg");
+.about .hero_section,
+.courses .hero_section,
+.contact .hero_section{
+    background: url("../images/banner-slide/top-banner-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -195,7 +192,7 @@ section{
     min-height: auto;
 }
 
-/*01 navbar css*/
+/* navbar css*/
 .header{
     position: absolute;
     width: 100%;
@@ -215,9 +212,7 @@ section{
 .header .navbar-brand{
     width: 7.5rem;
     margin-top: -0.1rem;
-    margin-left: 40%;
 }
-
 
 .header .navbar-nav .nav-link{
     color: var(--text-white);
@@ -256,42 +251,393 @@ section{
     transition: .3s all ease-in-out;
 }
 
-/*02 banner section*/
-.banner_section{
-    background: url("../images/banner-slide/Banner-1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 90vh;
+/*hero section*/
+.hero_section{
+    min-height: 100vh;
 }
 
-.banner_section .carousel-item{
-    padding: 3rem 0;
-    height: 90vh;
+.hero_section .text-content{
+    padding-top: 28%;
+    padding-right: 0;
 }
 
-.banner_section .carousel-caption{
-    top: 48%;
-    bottom: 0;
-    right: 3%;
-    left: 0;
-    text-align: right;
-    width: 100%;
-}
-
-.banner_section .carousel-caption p{
-    padding: 0.5rem 1.5rem;
-    background-color: var(--dark-color);
+.hero_section .text-content h1{
     display: inline;
-    color: white;
-    font-size: 2rem;
-    max-width: 40rem;
+    color: var(--dark-color);
+    font-size: 8rem;
 }
 
-/*03 features css*/
+.hero_section .text-paragraph p{
+    padding: 0.2rem 1rem;
+    background-color: var(--dark-color);
+    border-radius: 1.5rem;
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 72%;
+    margin-top: 4rem;
+}
 
+.hero-image{
+    padding-top: 20%;
+    padding-left: 0;
+    height: 80vh;
+}
+
+/*Count section*/
+.counts_section{
+    color: var(--primary-text);
+}
+
+.content-container{
+    padding-top: 4%;
+    width: 100%;
+    border: 0.2rem solid var(--light-color);
+    border-radius: 15px;
+}
+
+.content{
+    margin-bottom: 50px;
+}
+
+.content span:first-child{
+    font-size: 4rem;
+    font-weight: bold;
+    display: block;
+}
+
+.content span:last-child{
+    font-size: 2rem;
+}
 /*04 about section*/
+.about_section .about-title {
+    font-size: 3.5rem;
+}
 
-/*05 courses card design*/
+.about_section .about-title::after{
+    content: "";
+    background: var(--secondry-color);
+    display: block;
+    height: 3px;
+    width: 90%;
+    margin: 30px auto;
+    margin-bottom: 0;
+}
 
-/*06 testimonial*/
+.about_section .about-subtitle{
+    margin-bottom: 8%;
+    font-size: 2.3rem;
+}
+
+/*Quotes section*/
+
+/*03 courses css*/
+.courses_section .course-title {
+    margin-top: 5%;
+    font-size: 3.5rem;
+}
+
+.courses_section .course-title::after{
+    content: "";
+    background: var(--secondry-color);
+    display: block;
+    height: 3px;
+    width: 90%;
+    margin: 30px auto;
+    margin-bottom: 0;
+}
+
+.courses_section .course-subtitle{
+    margin-bottom: 8%;
+    font-size: 2.3rem;
+    margin-top: 0;
+}
+
+.courses_section .courses-box{
+    background-color: transparent;
+    border: 0.2rem solid var(--light-color);
+    border-radius: 15px;
+    padding: 8rem 0;
+    margin: 1.5rem;
+    transition: all 0.3s;
+}
+
+.courses_section .courses-icon-border{
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.2rem solid var(--light-color);
+    padding: 1.3rem;
+    display: inline-block;
+}
+
+.courses_section .courses-box .courses-icon{
+    height: 6.5rem;
+    width: 6.5rem;
+    background-color: var(--light-color);
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses_section .courses-box .courses-icon i{
+    width: 3.7rem;
+    font-size: 4rem;
+}
+
+.courses_section .courses-box h3{
+    margin-top: 1.5rem;
+    color: var(--primary-text);
+}
+
+.courses_section .courses-box p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.courses_section .courses-box:hover{
+    background-color: var(--bg-dark-color);
+    border-color: var(--bg-dark-color);
+}
+
+.courses_section .courses-box:hover h3{
+    color: var(--text-white);
+}
+
+.courses_section .courses-box:hover p{
+    color: var(--text-white);
+}
+
+.courses_section .courses-box:hover .courses-icon-border{
+    border-color: var(--secondry-color);
+}
+
+/* Enroll */
+
+/*05 testimonial*/
+.testimonial-section .testimonial-title {
+    margin-top: 5%;
+    font-size: 3.5rem;
+}
+
+.testimonial_section .testimonial-title::after{
+    content: "";
+    background: var(--secondry-color);
+    display: block;
+    height: 3px;
+    width: 90%;
+    margin: 30px auto;
+    margin-bottom: 0;
+}
+
+.testimonial_section .testimonial-subtitle{
+    margin-bottom: 8%;
+    font-size: 2.3rem;
+}
+
+.testimonial-profile-column{
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text within the profile */
+}
+
+.carousel-item .profile {
+    position: relative; /* Ensure content stays within the div */
+    padding: 7rem 7rem;
+    padding-bottom: 4rem;
+    border: 0.2rem solid var(--light-color);
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+}
+
+.carousel-item .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid var(--bg-white);
+}
+
+.carousel-item .profile p {
+    margin: 50px 0;
+}
+
+.carousel-item .profile h4 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.carousel-item .profile span {
+    font-size: 1.8rem;
+}
+
+/* Style the "Previous" and "Next" buttons within the carousel slides */
+.carousel-button .carousel-control-prev i,
+.carousel-button .carousel-control-next i {
+    color: var(--bg-dark-color);
+    font-size: 5rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-button .carousel-control-prev i:hover,
+.carousel-button .carousel-control-next i:hover {
+    color: var(--secondry-color);
+}
+
+/*06 Footer*/
+.footer_wrapper{
+    background: url("../images/footer-bg/footer_bg.png");
+    background-size: cover;
+    background-position:top center;
+    background-repeat: no-repeat;
+    padding-top: 20rem;
+}
+
+.footer_wrapper h5{
+    color: var(--text-white);
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer_wrapper p{
+    color: var(--text-gray);
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.footer_wrapper ul li{
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+.footer_wrapper .contact-info li a{
+    color: var(--text-gray);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.footer_wrapper .contact-info li a i{
+    margin-left: 1.5rem;
+    padding-right: 3rem;
+}
+
+.footer_wrapper .link-widget li a{
+    color: var(--text-gray);
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-right: 2rem;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.footer_wrapper .link-widget li a:before{
+    font-family: 'Font Awesome 5 Free';
+    content: "\f104";
+    font-weight: 900;
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.footer_wrapper .link-widget li a:hover{
+    margin-right: 0.625rem;
+    color: var(--secondry-color);
+}
+
+.footer_wrapper .social-network li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_wrapper .social-network a{
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    margin: 0.5rem;
+    display: inline-block;
+    border: 0.125rem solid var(--text-gray);
+    color: var(--text-gray);
+    border-radius: 100%;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer_wrapper .social-network a:hover{
+    background-color: var(--secondry-color);
+    border-color: var(--secondry-color);
+    color: var(--text-white);
+    box-shadow: 0 0.625rem 0.9375rem 0 rgb(0 0 0 / 10%);
+    transform: translateY(-0.1875rem);
+}
+
+.footer_wrapper .form-control{
+    font-size: 2rem;
+    color: var(--text-white);
+}
+
+.footer_wrapper .form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondry-color);
+}
+
+.to-top-btn{
+    position: fixed;
+    background-color: var(--text-gray);
+    z-index: 99;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    bottom: 13%;
+    left: 3%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+body.scroll-behavior {
+    scroll-behavior: smooth;
+}
+
+.to-top-btn i{
+    font-size: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.to-top-btn i:hover{
+    color: var(--secondry-color);
+}
+
+/*Copyright section*/
+.copyright_section{
+    background-color: var(--secondry-color);
+    text-align: center;
+    padding: 0;
+}
+
+.copyright_section p{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    margin: 0;
+}
