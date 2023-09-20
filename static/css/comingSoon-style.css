@@ -1,0 +1,145 @@
+/* General CSS */
+@font-face {
+    font-family: "yekan";
+    src: url("../fonts/BYekan+.ttf");
+}
+
+*::before,
+*::after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root{
+    /*Background Color*/
+    --bg-white: #ffff;
+    --bg-dark-color: #03262c;
+
+    /*Text Colors*/
+    --primary-text: #061738;
+    --secondry-color: #60cd12;
+    --light-color: #e2f6de;
+    --dark-color: #03262c;
+    --text-white: #ffff;
+    --text-gray: #dee2e6;
+    --anchor-color: #007aff;
+
+    /*Font Family*/
+    --primary-font: 'yekan'
+}
+
+body,
+html{
+    color: var(--primary-text);
+    font-size: 10px;
+    font-weight: bold;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+}
+
+h3{
+    color: var(--primary-text);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+button{
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover,
+button:hover{
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--bg-white);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--secondry-color);
+}
+
+.main-btn{
+    position: relative;
+    color: var(--bg-white);
+    background: var(--secondry-color);
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 3.5rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.main-btn:hover{
+    background: var(--bg-white);
+    color: var(--secondry-color);
+    border: 1.5px solid var(--primary-text);
+}
+
+.four-zero-four-page{
+    padding: 40px 0;
+    background: var(--bg-white);
+}
+
+.four-zero-four-page img{
+    width: 100%;
+}
+
+.four-zero-four-bg{
+    background: url("../images/commigSoon.gif");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Media Query 768px*/
+@media (max-width: 768px) {
+    h3{
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 590px) {
+    h3{
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+

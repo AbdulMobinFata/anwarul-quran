@@ -1,10 +1,10 @@
 // Headers scroll
 let nav = document.querySelector(".navbar")
 
-window.onscroll = function (){
-    if (document.documentElement.scrollTop > 50 ){
+window.onscroll = function () {
+    if (document.documentElement.scrollTop > 50) {
         nav.classList.add("header-scrolled")
-    }else{
+    } else {
         nav.classList.remove("header-scrolled")
     }
 }
@@ -14,8 +14,8 @@ window.onscroll = function (){
 let navlink = document.querySelectorAll(".nav-link")
 let navCollapse = document.querySelector(".navbar-collapse.collapse")
 
-navlink.forEach(function(e){
-    e.addEventListener("click", function (){
+navlink.forEach(function (e) {
+    e.addEventListener("click", function () {
         navCollapse.classList.remove("show")
     })
 })
@@ -24,41 +24,53 @@ navlink.forEach(function(e){
 const counters = document.querySelectorAll(".counter");
 
 const options = {
-  root: null, // Use the viewport as the root
-  rootMargin: "0px",
-  threshold: 0.15, // Trigger when 15% of the element is visible
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.15,
 };
 
 const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      // Start the counting animation
-      const counter = entry.target;
-      let initial_count = 0;
-      const final_count = counter.dataset.count;
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            let initial_count = 0;
+            const final_count = counter.dataset.count;
 
-      const counting = setInterval(updateCounting, 10);
+            const counting = setInterval(updateCounting, 10);
 
-      function updateCounting() {
-        if (initial_count < 1000) {
-          initial_count += 1;
-          counter.innerText = initial_count;
+            function updateCounting() {
+                if (initial_count < final_count) {
+                    initial_count += 1;
+                    counter.innerText = "+" + convertToArabicNumeral(initial_count);
+                } else {
+                    clearInterval(counting);
+                }
+            }
+
+
+            observer.unobserve(counter);
         }
-        if (initial_count >= final_count) {
-          clearInterval(counting);
-        }
-      }
-
-      // Unobserve the counter to prevent multiple animations
-      observer.unobserve(counter);
-    }
-  });
+    });
 }, options);
 
 counters.forEach((counter) => {
-  observer.observe(counter);
+    observer.observe(counter);
 });
 
+window.addEventListener("scroll", () => {
+    counters.forEach((counter) => {
+        const rect = counter.getBoundingClientRect();
+        if (rect.top > window.innerHeight) {
+            counter.innerText = "0";
+            observer.observe(counter);
+        }
+    });
+});
+
+function convertToArabicNumeral(number) {
+    const arabicNumerals = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+    return String(number).split('').map(char => arabicNumerals[char]).join('');
+}
 
 // To top button
 let toTopButton = document.querySelector(".to-top-btn");

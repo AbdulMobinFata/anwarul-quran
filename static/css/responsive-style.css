@@ -15,7 +15,7 @@
         margin: 0 0;
     }
 
-    /*02 hero section*/
+    /*hero section*/
     .hero_section {
         min-height: 100vh;
     }
@@ -67,7 +67,12 @@
         padding: 0.2rem 0.5rem;
         margin-bottom: 1rem;
     }
+
     #registrationButton {
+        display: none;
+    }
+
+    .footer-image {
         display: none;
     }
 
@@ -84,10 +89,12 @@
     .section-subtitle {
         max-width: 80%;
     }
+
     /*count section*/
-    .counts_section{
+    .counts_section {
         padding-top: 0;
     }
+
     /*hero section*/
     .hero_section {
         height: 140vh;
@@ -105,9 +112,24 @@
         justify-content: center;
         text-align: center;
     }
-    .hero_section .text-content .text-paragraph p{
+
+    .hero_section .text-content .text-paragraph p {
         font-size: 1.6rem;
     }
+
+    /*about section*/
+    .about_section .text-content .text-paragraph p {
+        text-align: center;
+    }
+
+    .about_section .text-content .text-paragraph p span {
+        text-align: center;
+    }
+
+    .about-image {
+        padding-top: 50px;
+    }
+
 }
 
 /*Media Query 590px*/
@@ -117,9 +139,11 @@
     body, html {
         font-size: 7px;
     }
+
     .footer_wrapper .col-sm-12 {
         padding: 5rem;
     }
+
     .footer_wrapper .col-lg-5,
     .footer_wrapper .col-lg-3 {
         margin: 0;

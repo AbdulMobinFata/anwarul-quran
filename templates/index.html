@@ -6,7 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>مدرسه انوار القرآن</title>
-    <link rel="icon" href="../static/icon/logo.png">
+    <link rel="icon" href="https://api.whatsapp.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.facebook.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.skype.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='icon/logo.png') }}" type="image/x-icon">
 
     <!-- Boxicon link -->
     <link
@@ -30,7 +33,7 @@
 <body>
 
 <!-- Navbar Section Start -->
-<header class="full_nav">
+<header id="full_nav" class="full_nav">
     <div class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
@@ -47,17 +50,18 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto mr-auto text-left">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">صفحه اصلی</a>
+                            <a class="nav-link hero-nav-link" aria-current="page" href="#hero_section">صفحه اصلی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../templates/404.html">سوال و جواب شرعی</a>
+                            <a class="nav-link q&a-nav-link" href="{{ url_for('qa_library')}}">سوال و جواب شرعی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../templates/404.html">کتابخانه</a>
+                            <a class="nav-link library-nav-link" href="{{url_for('qa_library')}}">کتابخانه</a>
                         </li>
                     </ul>
                 </div>
-                <a id="registrationButton" class="btn main-btn">ثبت نام</a>
+                <a id="registrationButton" class="btn main-btn"
+                   href="{{url_for('register_form')}}">ثبت نام</a>
             </nav>
         </div>
     </div>
@@ -65,7 +69,7 @@
 <!-- Navbar Section Exit -->
 
 <!-- Hero Section Start -->
-<section class="hero_section">
+<section class="hero_section" id="hero_section">
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center align-items-center">
@@ -79,7 +83,7 @@
                 </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center justify-content-md-end align-items-center">
-                <img class="hero-image" src="../static/images/banner-slide/Banner-1-2-1.png" alt="">
+                <img class="hero-image" src="../static/images/banner-slide/quran-clipart.png" alt="">
             </div>
         </div>
     </div>
@@ -87,31 +91,31 @@
 <!-- Hero Section Exit -->
 
 <!-- Counts Section Start -->
-<section class="counts_section">
+<section id="counts_section" class="counts_section">
     <div class="container">
         <div class="content-container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center">
                     <div class="content">
-                        <span class="counter" data-count="100">1</span>
+                        <span class="counter" data-count="1500">1</span>
                         <span>دانش آموزان فارغ شده</span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center">
                     <div class="content">
-                        <span class="counter" data-count="100">2</span>
+                        <span class="counter" data-count="566">2</span>
                         <span>دانش آموزان در حال تحصیل</span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center">
                     <div class="content">
-                        <span class="counter" data-count="100">3</span>
+                        <span class="counter" data-count="550">3</span>
                         <span>دانش آموزان حضوری</span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mx-auto text-center">
                     <div class="content">
-                        <span class="counter" data-count="100">4</span>
+                        <span class="counter" data-count="16">4</span>
                         <span>دانش آموزان آنلاین</span>
                     </div>
                 </div>
@@ -125,31 +129,44 @@
 <!-- Quotes Section Exit -->
 
 <!-- About Section Start -->
-<section class="about_section">
+<section id="about_section" class="about_section">
     <div class="container">
         <div class="row pb-5">
             <div class="col-12 text-center">
-                <h2 class="about-title">در باره ما</h2>
-                <p class="about-subtitle">مدرسه انوار القرآن این برنامه های آموزشی را بصورت حضوری و آنلاین ارایه
-                    می دهد</p>
+                <h2 class="section-title">در باره ما</h2>
+                <p class="section-subtitle">برای معلومات بیشتر در مورد مدرسه لطفا متن زیر را مطالعه فرمایید</p>
             </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <div class="text-content">
-                        <div class="text-pargraph">
-                            <p class="text-center">قرآن این برنامه های آموزشی را بصورت حضوری و آنلاین ارقرآن این برنامه
-                                های آموزشی را بصورت حضوری و آنلاین ار
-                                قرآن این برنامه های آموزشی را بصورت حضوری و آنلاین ارقرآن این برنامه های آموزشی را بصورت
-                                حضوری و آنلاین ار
-                                قرآن این برنامه های آموزشی را بصورت حضوری و آنلاین ارقرآن این برنامه های آموزشی را بصورت
-                                حضوری و آنلاین ار</p>
+                        <div class="text-paragraph">
+                            <p>
+                                <span>« وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِنْ مُدَّكِر » ( قمر ١٧ )</span>
+                                <br>
+                                ترجمه: براستی که قرآن را برای پند گرفتن آسان ساختیم؛<br> آیا پند پذیری هست ؟
+                                <br>
+                                <br>
+                                <span>« خَيرُكُم من تعلَّمَ القرآنَ وعلَّمَهُ » (متفق علیه)</span>
+                                <br>
+                                ترجمه: بهترین شما کسی است که قرآن را بیاموزد و به دیگران بیاموزاند.
+                                <br>
+                                <br>
+                                مدرسه انوار القرآن به هدف بالا بردن سطح علمی علاقمندان علوم اسلامی امکانات آموزش را به
+                                صورت حضوری و آنلاین به طور انفرادی و گروهی به زبان های فارسی و پشتو در سراسر جهان فراهم
+                                نموده است.
+                                <br>
+                                <br>
+                                مدرسه انوار القرآن با داشتن محیط آرام و آموزشی، استادان مجرب و ورزیده از قشر ذکور و
+                                اناث؛ با داشتن تجربه « ١٥ » سال در بخش آموزش حضوری و <br>« ٤ » سال در بخش آموزش آنلاین با بهترین
+                                امکانات درسی در خدمت شما عزیزان متدین قرار دارد.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center justify-content-md-end align-items-center">
-                    <img class="hero-image" src="../static/images/banner-slide/Banner-1-2-1.png" alt="">
+                    <img class="about-image" src="../static/images/about/about-banner.png" alt="">
                 </div>
             </div>
         </div>
@@ -158,12 +175,12 @@
 <!-- About Section Exit -->
 
 <!-- courses Section Start -->
-<section class="courses_section">
+<section id="courses_section" class="courses_section">
     <div class="container">
         <div class="row pb-5">
             <div class="col-12 text-center">
-                <h2 class="course-title">برنامه آموزشی ما</h2>
-                <p class="course-subtitle">مدرسه انوار القرآن این برنامه های آموزشی را بصورت حضوری و آنلاین ارایه می
+                <h2 class="section-title">برنامه های آموزشی</h2>
+                <p class="section-subtitle">مدرسه انوار القرآن برنامه های آموزشی زیر را بصورت حضوری و آنلاین آموزش می
                     دهد</p>
             </div>
             <div class="row">
@@ -211,11 +228,11 @@
                         <div class="text-center">
                             <div class="courses-icon-border">
                                 <div class="courses-icon">
-                                    <i class='bx bxs-note'></i>
+                                    <i class='bx bxs-brain'></i>
                                 </div>
                             </div>
-                            <h3>ترجمه و تفسیر قرآنکریم</h3>
-                            <p>از مبتدی تا پیشرفته</p>
+                            <h3>فقه اسلامی</h3>
+                            <p>مطابق نیاز هر مسلمان</p>
                         </div>
                     </div>
                 </div>
@@ -224,11 +241,11 @@
                         <div class="text-center">
                             <div class="courses-icon-border">
                                 <div class="courses-icon">
-                                    <i class='bx bxs-brain'></i>
+                                    <i class='bx bxs-note'></i>
                                 </div>
                             </div>
-                            <h3>فقه و عقیده اسلامی</h3>
-                            <p>از مبتدی تا پیشرفته</p>
+                            <h3>ترجمه و تفسیر قرآنکریم</h3>
+                            <p>تحت اللفظی و مفهومی</p>
                         </div>
                     </div>
                 </div>
@@ -240,8 +257,8 @@
                                     <i class='bx bxs-book-alt'></i>
                                 </div>
                             </div>
-                            <h3>علوم قرآنی</h3>
-                            <p>از مبتدی تا پیشرفته</p>
+                            <h3>عقاید اسلامی</h3>
+                            <p>عقاید اهل سنت و الجماعت</p>
                         </div>
                     </div>
                 </div>
@@ -255,27 +272,26 @@
 <!--Enroll Section Exit-->
 
 <!-- Testimonial Section Start -->
-<section class="testimonial_section">
+<section id="testimonial_section" class="testimonial_section">
     <div class="container">
         <div class="row pb-5">
             <div class="col-12 text-center">
-                <h2 class="testimonial-title">نظریات دانش آموزان ما</h2>
-                <p class="testimonial-subtitle">مدرسه انوار القرآن این برنامه های آموزشی را بصورت حضوری و آنلاین ارایه
-                    می دهد</p>
+                <h2 class="section-title">دیدگاه دانش آموزان</h2>
+                <p class="section-subtitle">دانش آموزان در مورد مدرسه انوار القرآن چنین ابراز نظر نظر نموده اند</p>
             </div>
         </div>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide carousel-button">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-button" data-bs-ride="carousel"
+         data-bs-interval="7000">
         <div class="carousel-inner">
             <div class="carousel-item">
                 <div class="testimonial-profile-column">
                     <div class="profile">
-                        <img src="../static/images/testimonial/testimonial-1.png"
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
                             تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
+                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
                         </p>
                         <h4>1عبدالمبین فتی</h4>
                         <span>از افغانستان</span>
@@ -285,12 +301,11 @@
             <div class="carousel-item">
                 <div class="testimonial-profile-column">
                     <div class="profile">
-                        <img src="../static/images/testimonial/testimonial-1.png"
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
                             تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
+                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
                         </p>
                         <h4>عبدالمبین فتی2</h4>
                         <span>از افغانستان</span>
@@ -300,12 +315,11 @@
             <div class="carousel-item active">
                 <div class="testimonial-profile-column">
                     <div class="profile">
-                        <img src="../static/images/testimonial/testimonial-1.png"
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
                             تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
+                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
                         </p>
                         <h4>3عبدالمبین فتی</h4>
                         <span>از افغانستان</span>
@@ -315,12 +329,11 @@
             <div class="carousel-item">
                 <div class="testimonial-profile-column">
                     <div class="profile">
-                        <img src="../static/images/testimonial/testimonial-1.png"
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
                             تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
+                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
                         </p>
                         <h4>4عبدالمبین فتی</h4>
                         <span>از افغانستان</span>
@@ -330,12 +343,11 @@
             <div class="carousel-item">
                 <div class="testimonial-profile-column">
                     <div class="profile">
-                        <img src="../static/images/testimonial/testimonial-1.png"
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
                             تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
+                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
                         </p>
                         <h4>5عبدالمبین فتی</h4>
                         <span>از افغانستان</span>
@@ -345,13 +357,13 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
-            <i class='bx bx-chevron-left'></i> <!-- Use Boxicons icon for "Previous" -->
+            <i class='bx bx-chevron-left'></i>
             <span class="visually-hidden">Previous</span>
         </button>
 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="next">
-            <i class='bx bx-chevron-right'></i> <!-- Use Boxicons icon for "Next" -->
+            <i class='bx bx-chevron-right'></i>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
@@ -359,7 +371,7 @@
 <!-- Testimonial Section Exit -->
 
 <!-- Footer Section Start -->
-<section class="footer_wrapper mt-3 mb-md-0">
+<section id="footer_wrapper" class="footer_wrapper mt-3 mb-md-0">
     <div class="container px-5 px-lg-0">
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 mb-5 mb-lg-0">
@@ -367,33 +379,37 @@
                 <p class="mb-4 ps-0 company-details">مرکز آموزش علوم اسلامی بصورت حضوری و آنلاین</p>
                 <div class="contact-info">
                     <ul class="list-unstyled">
-                        <li><a href=""><i class="fa fa-home me-3"></i>کوچه ریاست ترافیک، دهمزنگ، کابل، افغانستان</a>
+                        <li><a href="https://maps.app.goo.gl/KBKajww8QWxBDp6H8"><i class="fa fa-home me-3"></i>کوچه ریاست ترافیک، دهمزنگ، کابل، افغانستان</a>
                         </li>
                         <li><a href="tel:+93798182521"><i class="fa fa-phone me-3"></i>521 8182 79 93+</a></li>
-                        <li><a href=""><i class="fab fa-whatsapp me-3"></i>521 8182 79 93+</a></li>
-                        <li><a href=""><i class="fa fa-envelope me-3"></i>info@anwarul-quran.com</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=0093798182521"><i class="fab fa-whatsapp me-3"></i>521 8182 79 93+</a></li>
+                        <li><a href="mailto:anwarulquran1402@gmail.com"><i class="fa fa-envelope me-3"></i>anwarulquran1402@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3 col-md-12 col-sm-12 mb-5 mb-lg-0">
                 <h5>لینک های مهم</h5>
                 <ul class="link-widget">
-                    <li><a href="#">صفحه اصلی</a></li>
-                    <li><a href="#">سوال و جواب شرعی</a></li>
-                    <li><a href="#">کتابخانه</a></li>
-                    <li><a href="#">ارتباط با ما</a></li>
-                    <li><a href="#">در باره ما</a></li>
+                    <li><a href="#hero_section">صفحه اصلی</a></li>
+                    <li><a href="{{ url_for('qa_library')}}">سوال و جواب شرعی</a></li>
+                    <li><a href="{{ url_for('qa_library')}}">کتابخانه</a></li>
+                    <li><a href="{{ url_for('register_form')}}">ثبت نام</a></li>
+                    <li><a href="#about_section">در باره ما</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-12 col-sm-12 mb-5 mb-lg-0">
-                <h5>همیشه با خبر باشید</h5>
-                <ul class="social-network d-flex align-items-center p-0 order-md-last">
-                    <li><a href="" class="fab fa-facebook-f"><i></i></a></li>
-                    <li><a href="" class="fab fa-whatsapp"><i></i></a></li>
-                    <li><a href="" class="fab fa-youtube"><i></i></a></li>
-                    <li><a href="" class="fab fa-skype"><i></i></a></li>
-                </ul>
+                <div class="d-flex flex-column align-items-start align-items-xl-center">
+                    <a href="#hero_section"> <img class="footer-image" alt="لوگوی مدرسه انوار القرآن" src="../static/images/logo.png"></a>
+                    <h5>همیشه با خبر باشید</h5>
+                    <ul class="social-network d-flex align-items-center p-0 order-md-last">
+                        <li><a href="https://api.whatsapp.com/send?phone=0093798182521" class="fab fa-whatsapp"><i></i></a></li>
+                        <li><a href="https://www.facebook.com/Anwaar2020" class="fab fa-facebook-f"><i></i></a></li>
+                        <li><a href="skype:?chat" class="fab fa-skype"><i></i></a></li>
+                        <!-- <li><a href="" class="fab fa-youtube"><i></i></a></li> -->
+                    </ul>
+                </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -405,12 +421,12 @@
 </div>
 <!-- To Top Button Exit -->
 
-<!--Copyright Section Start-->
-<section class="copyright_section">
-    <p> ١٤٠٢&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;همه حقوق این سایت برای مدرسه انوارالقرآن
-        محفوظ است</p>
+<!-- Copyright Section Start -->
+<section id="copyright_section" class="copyright_section">
+    <p> {{ current_year }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;همه حقوق این سایت برای
+        مدرسه انوارالقرآن محفوظ است</p>
 </section>
-<!--Copyright Section Exit-->
+<!-- Copyright Section Exit -->
 
 
 <!-- Bootstrap 5 CDN -->

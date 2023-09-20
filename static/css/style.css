@@ -63,7 +63,7 @@ h1{
 h2{
     color: var(--primary-text);
     font-size: 4.7rem;
-    font-weight: 600;
+    font-weight: bold;
     display: inline-block;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -165,31 +165,28 @@ section{
 }
 
 .section-title{
-    font-size: 4rem;
-    font-weight: 600;
+    font-size: 4.2rem;
+    font-weight: bold;
     color: var(--primary-text);
     margin-bottom: 2rem;
 }
 
-.section-subtilte{
-    font-size: 1.6rem;
-    font-weight: 400;
+.section-subtitle{
+    font-size: 2.5rem;
+    font-weight: bold;
     color: var(--primary-text);
-    max-width: 40%;
-    margin-bottom: auto;
-    margin-bottom: 1.5rem;
+    margin-bottom: 8%;
+    text-align: center;
 }
 
-.about .hero_section,
-.courses .hero_section,
-.contact .hero_section{
-    background: url("../images/banner-slide/top-banner-2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 17rem;
-    padding-bottom: 10rem;
-    min-height: auto;
+.section-title::after{
+    content: "";
+    background: var(--secondry-color);
+    display: block;
+    height: 3px;
+    width: 90%;
+    margin: 30px auto;
+    margin-bottom: 0;
 }
 
 /* navbar css*/
@@ -206,11 +203,11 @@ section{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    padding: 2rem 5rem;
+    padding: 2rem 7rem;
 }
 
 .header .navbar-brand{
-    width: 7.5rem;
+    width: 8.2rem;
     margin-top: -0.1rem;
 }
 
@@ -282,7 +279,7 @@ section{
 .hero-image{
     padding-top: 20%;
     padding-left: 0;
-    height: 80vh;
+    height: 90vh;
 }
 
 /*Count section*/
@@ -310,53 +307,26 @@ section{
 .content span:last-child{
     font-size: 2rem;
 }
-/*04 about section*/
-.about_section .about-title {
-    font-size: 3.5rem;
+/* about section*/
+.about_section .text-content .text-paragraph p{
+    font-size: 2rem;
 }
 
-.about_section .about-title::after{
-    content: "";
-    background: var(--secondry-color);
-    display: block;
-    height: 3px;
-    width: 90%;
-    margin: 30px auto;
-    margin-bottom: 0;
-}
-
-.about_section .about-subtitle{
-    margin-bottom: 8%;
+.about_section .text-content .text-paragraph p span{
     font-size: 2.3rem;
 }
+
+.about-image{
+    padding-right: 50px;
+    margin-bottom: 20px;
+    }
 
 /*Quotes section*/
 
-/*03 courses css*/
-.courses_section .course-title {
-    margin-top: 5%;
-    font-size: 3.5rem;
-}
-
-.courses_section .course-title::after{
-    content: "";
-    background: var(--secondry-color);
-    display: block;
-    height: 3px;
-    width: 90%;
-    margin: 30px auto;
-    margin-bottom: 0;
-}
-
-.courses_section .course-subtitle{
-    margin-bottom: 8%;
-    font-size: 2.3rem;
-    margin-top: 0;
-}
-
+/* courses css*/
 .courses_section .courses-box{
     background-color: transparent;
-    border: 0.2rem solid var(--light-color);
+    border: 0.4rem solid var(--light-color);
     border-radius: 15px;
     padding: 8rem 0;
     margin: 1.5rem;
@@ -366,7 +336,7 @@ section{
 .courses_section .courses-icon-border{
     background-color: transparent;
     border-radius: 50%;
-    border: 0.2rem solid var(--light-color);
+    border: 0.4rem solid var(--light-color);
     padding: 1.3rem;
     display: inline-block;
 }
@@ -416,41 +386,21 @@ section{
 
 /* Enroll */
 
-/*05 testimonial*/
-.testimonial-section .testimonial-title {
-    margin-top: 5%;
-    font-size: 3.5rem;
-}
-
-.testimonial_section .testimonial-title::after{
-    content: "";
-    background: var(--secondry-color);
-    display: block;
-    height: 3px;
-    width: 90%;
-    margin: 30px auto;
-    margin-bottom: 0;
-}
-
-.testimonial_section .testimonial-subtitle{
-    margin-bottom: 8%;
-    font-size: 2.3rem;
-}
-
+/* testimonial*/
 .testimonial-profile-column{
     margin: 60px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center text within the profile */
+    text-align: center;
 }
 
 .carousel-item .profile {
-    position: relative; /* Ensure content stays within the div */
+    position: relative;
     padding: 7rem 7rem;
     padding-bottom: 4rem;
-    border: 0.2rem solid var(--light-color);
+    border: 0.4rem solid var(--light-color);
     border-radius: 15px;
     text-align: center;
     width: 90%;
@@ -464,11 +414,12 @@ section{
     top: -60px;
     left: 50%;
     transform: translateX(-50%);
-    border: 10px solid var(--bg-white);
+    border: 15px solid var(--bg-white);
 }
 
 .carousel-item .profile p {
     margin: 50px 0;
+    font-size: 2.2rem;
 }
 
 .carousel-item .profile h4 {
@@ -480,7 +431,6 @@ section{
     font-size: 1.8rem;
 }
 
-/* Style the "Previous" and "Next" buttons within the carousel slides */
 .carousel-button .carousel-control-prev i,
 .carousel-button .carousel-control-next i {
     color: var(--bg-dark-color);
@@ -496,7 +446,7 @@ section{
     color: var(--secondry-color);
 }
 
-/*06 Footer*/
+/* Footer*/
 .footer_wrapper{
     background: url("../images/footer-bg/footer_bg.png");
     background-size: cover;
@@ -599,6 +549,11 @@ section{
     outline: none;
     box-shadow: none;
     border-color: var(--secondry-color);
+}
+
+.footer-image{
+    width: 12rem;
+    margin-bottom: 3rem;
 }
 
 .to-top-btn{
