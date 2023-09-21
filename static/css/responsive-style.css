@@ -83,11 +83,7 @@
 
     /*General css*/
     body, html {
-        font-size: 8px;
-    }
-
-    .section-subtitle {
-        max-width: 80%;
+        font-size: 9px;
     }
 
     /*count section*/
@@ -114,7 +110,8 @@
     }
 
     .hero_section .text-content .text-paragraph p {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
+        width: 90%;
     }
 
     /*about section*/
@@ -137,7 +134,7 @@
 
     /*General css*/
     body, html {
-        font-size: 7px;
+        font-size: 8px;
     }
 
     .footer_wrapper .col-sm-12 {
