@@ -313,6 +313,7 @@ section{
 /* about section*/
 .about_section .text-content .text-paragraph p{
     font-size: 2rem;
+    margin: 5%;
 }
 
 .about_section .text-content .text-paragraph p span{
