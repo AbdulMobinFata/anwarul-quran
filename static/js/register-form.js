@@ -1,27 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
+sdocument.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.needs-validation');
-    const birthDateInput = document.getElementById('birth-date');
-    const guardianDetailsSection = document.querySelector('.guardian-details');
+    const birthDateInput = document.getElementById('birthDate');
+    const guardianDetailsSection = document.querySelector('.guardianDetails');
+    const errorMessage = document.getElementById('error-message');
 
     form.addEventListener('submit', function (event) {
-        // Check if the student's age is less than 18
         const age = calculateAge(birthDateInput.value);
         if (age < 18) {
-            // If the student is under 18, validate the guardian details
             if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();
+                errorMessage.innerText = 'Please fill out all fields.';
             }
         } else {
-            // If the student is 18 or older, do not validate guardian details
             guardianDetailsSection.classList.remove('was-validated');
         }
 
-        // Always add 'was-validated' class to the form
         form.classList.add('was-validated');
     });
 
-    // Function to calculate age based on birth date
     function calculateAge(birthDate) {
         const today = new Date();
         const birthDateObj = new Date(birthDate);
@@ -33,5 +30,33 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         return age;
+    }
+});
+
+// for submit valid or not valid to proceed
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.needs-validation');
+    const errorMessage = document.getElementById('error-message');
+
+    form.addEventListener('submit', function (event) {
+        // Your client-side validation logic goes here
+        if (!isFormValid()) {
+            event.preventDefault(); // Prevent form submission
+            errorMessage.innerText = 'Please fill out all fields.';
+        }
+    });
+
+    function isFormValid() {
+        // Implement your validation logic here
+        const firstNameInput = document.getElementById('firstName');
+        // Add more validation checks for other form fields as needed
+
+        if (!firstNameInput.value) {
+            return false;
+        }
+
+        // Add more validation checks for other fields
+
+        return true;
     }
 });

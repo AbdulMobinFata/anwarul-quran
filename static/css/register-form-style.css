@@ -154,9 +154,17 @@ input {
     margin-bottom: 0;
 }
 
+.row{
+    margin-bottom: 20px;
+}
+
 .rule-check {
     margin: 0;
     padding: 0;
+}
+
+.form-group input, .form-group select, .form-control {
+    margin-bottom: 0;
 }
 
 .form-control:focus {

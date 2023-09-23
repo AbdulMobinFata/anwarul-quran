@@ -227,6 +227,11 @@ section{
     color: var(--secondry-color);
 }
 
+#navbarNav{
+    display: flex;
+    justify-content: end;
+}
+
 .header .navbar-toggler{
     color: var(--text-white);
     font-size: 2rem;

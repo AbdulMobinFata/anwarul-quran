@@ -126,7 +126,9 @@
     .about-image {
         padding-top: 50px;
     }
-
+    .footer_wrapper .container .row{
+        padding: 5%;
+    }
 }
 
 /*Media Query 590px*/

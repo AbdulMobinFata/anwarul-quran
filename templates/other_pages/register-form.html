@@ -19,7 +19,7 @@
 <body>
 <div class="register-form">
     <div class="container">
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" method="post" action="/registration" enctype="multipart/form-data" novalidate>
             <h1 class="first-title">فورم ثبت نام</h1>
             <div class="personal-details part-separate">
                 <p class="section-title">مشخصات دانش آموز</p>
@@ -27,10 +27,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">اسم</span>
-                            <input type="text" class="form-control" id="firstName-input" required>
-                            <div class="valid-feedback">
-                                اسم معتبر است.
-                            </div>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
                             <div class="invalid-feedback">
                                 این فیلد اجباری است.
                             </div>
@@ -39,7 +36,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">اسم پدر</span>
-                            <input type="text" class="form-control" id="fatherName" required>
+                            <input type="text" class="form-control" id="fatherName" name="fatherName" required>
                             <div class="valid-feedback">
                                 اسم پدر معتبر است.
                             </div>
@@ -53,7 +50,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">تخلص</span>
-                            <input type="text" class="form-control" id="lastName" required>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
                             <div class="valid-feedback">
                                 تخلص معتبر است.
                             </div>
@@ -65,7 +62,8 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span for="time-input" class="inline-label">تاریخ تولد</span>
-                            <input type="date" class="form-control" id="birth-date" placeholder="سال/ماه/روز"
+                            <input type="date" class="form-control" id="birthDate" name="birthDate"
+                                   placeholder="سال/ماه/روز"
                                    required>
                             <div class="valid-feedback">
                                 تاریخ تولد معتبر است.
@@ -80,7 +78,8 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span for="time-input" class="inline-label">تاریخ ثبت نام</span>
-                            <input type="date" class="form-control" id="enroll-date" placeholder="سال/ماه/روز"
+                            <input type="date" class="form-control" id="enrollDate" name="enrollDate"
+                                   placeholder="سال/ماه/روز"
                                    required>
                             <div class="valid-feedback">
                                 تاریخ ثبت نام معتبر است.
@@ -93,7 +92,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">عکس دانش آموز</span>
-                            <input type="file" class="form-control" id="student-img" required>
+                            <input type="file" class="form-control" id="studentImg" name="studentImg" required>
                             <div class="valid-feedback">
                                 عکس دانش آموز معتبر است.
                             </div>
@@ -110,7 +109,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">کشور</span>
-                            <input type="text" class="form-control" id="country" required>
+                            <input type="text" class="form-control" id="country" name="country" required>
                             <div class="valid-feedback">
                                 کشور معتبر است.
                             </div>
@@ -122,7 +121,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">شهر</span>
-                            <input type="text" class="form-control" id="city" required>
+                            <input type="text" class="form-control" id="city" name="city" required>
                             <div class="valid-feedback">
                                 شهر معتبر است.
                             </div>
@@ -136,7 +135,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">ناحیه</span>
-                            <input type="text" class="form-control" id="district" required>
+                            <input type="text" class="form-control" id="district" name="district" required>
                             <div class="valid-feedback">
                                 ناحیه معتبر است.
                             </div>
@@ -148,7 +147,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">نمبر منزل</span>
-                            <input type="text" class="form-control" id="house-number" required>
+                            <input type="text" class="form-control" id="houseNumber" name="houseNumber" required>
                             <div class="valid-feedback">
                                 نمبر منزل معتبر است.
                             </div>
@@ -162,22 +161,22 @@
             <div class="internet-address">
                 <p class="section-title">نشانی های اینترنتی</p>
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <span class="form-label">شماره تماس</span>
-                            <input type="text" class="form-control" id="phone-number" required>
-                            <div class="valid-feedback">
-                                شماره تماس معتبر است.
-                            </div>
-                            <div class="invalid-feedback">
-                                این فیلد اجباری است.
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <div class="form-group">-->
+<!--                            <span class="form-label">شماره تماس</span>-->
+<!--                            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>-->
+<!--                            <div class="valid-feedback">-->
+<!--                                شماره تماس معتبر است.-->
+<!--                            </div>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                این فیلد اجباری است.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">نشانی ایمیل</span>
-                            <input type="text" class="form-control" id="email" required>
+                            <input type="text" class="form-control" id="email" name="email" required>
                             <div class="valid-feedback">
                                 نشانی ایمیل معتبر است.
                             </div>
@@ -187,34 +186,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <span class="form-label">شماره واتسپ</span>
-                            <input type="text" class="form-control" id="whatsapp-number" required>
-                            <div class="valid-feedback">
-                                شماره واتساپ معتبر است.
-                            </div>
-                            <div class="invalid-feedback">
-                                این فیلد اجباری است.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <span class="form-label">شماره اسکایپ</span>
-                            <input type="text" class="form-control" id="skype-number" required>
-                            <div class="valid-feedback">
-                                شماره اسکایپ معتبر است.
-                            </div>
-                            <div class="invalid-feedback">
-                                این فیلد اجباری است.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="guardian-details part-separate">
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <div class="form-group">-->
+<!--                            <span class="form-label">شماره واتسپ</span>-->
+<!--                            <input type="text" class="form-control" id="whatsappNumber" name="whatsappNumber" required>-->
+<!--                            <div class="valid-feedback">-->
+<!--                                شماره واتساپ معتبر است.-->
+<!--                            </div>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                این فیلد اجباری است.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <div class="form-group">-->
+<!--                            <span class="form-label">شماره اسکایپ</span>-->
+<!--                            <input type="text" class="form-control" id="skypeNumber" name="skypeNumber" required>-->
+<!--                            <div class="valid-feedback">-->
+<!--                                شماره اسکایپ معتبر است.-->
+<!--                            </div>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                این فیلد اجباری است.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="guardianDetails part-separate">
                 <p class="section-title">معلومات ولی دانش آموزش</p>
                 <p class="section-subtitle">در صورت که دانش آموزش کوچکتر از 18 سال سن داشته باشد؛ این معلومات را ولی اش
                     باید پر نماید</p>
@@ -222,7 +221,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="form-group">
                             <span class="form-label">اسم و تخلص ولی</span>
-                            <input type="text" class="form-control" id="guardian-name" required>
+                            <input type="text" class="form-control" id="guardianName" name="guardianName" required>
                             <div class="valid-feedback">
                                 نام و تخلص ولی معتبر است.
                             </div>
@@ -231,142 +230,142 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <span class="form-label">قرابت با دانش آموز</span>
-                            <select class="form-control" id="guardian-option" required>
-                                <option value="">انتخاب کنید...</option>
-                                <option value="Option1">پدر</option>
-                                <option value="Option3">مادر</option>
-                                <option value="Option2">برادر</option>
-                                <option value="Option3">ماما</option>
-                            </select>
-                            <div class="valid-feedback">
-                                انتخاب معتبر است.
-                            </div>
-                            <div class="invalid-feedback">
-                                این فیلد اجباری است.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <span class="form-label">نشانی ایمیل ولی</span>
-                            <input type="text" class="form-control" id="guardian-email" required>
-                            <div class="valid-feedback">
-                                نشانی ایمیل معتبر است.
-                            </div>
-                            <div class="invalid-feedback">
-                                این فیلد اجباری است.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <div class="form-group">
-                            <span class="form-label">شماره واتساپ ولی</span>
-                            <input type="text" class="form-control" id="guardian-whatsapp" required>
-                            <div class="valid-feedback">
-                                شماره واتساپ ولی معتبر است.
-                            </div>
-                            <div class="invalid-feedback">
-                                این فیلد اجباری است.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <div class="form-group">-->
+<!--                            <span class="form-label">قرابت با دانش آموز</span>-->
+<!--                            <select class="form-control" id="guardianRelationship" name="guardianRelationship" required>-->
+<!--                                <option value="">انتخاب کنید...</option>-->
+<!--                                <option value="father">پدر</option>-->
+<!--                                <option value="mother">مادر</option>-->
+<!--                                <option value="brother">برادر</option>-->
+<!--                                <option value="mamaa">ماما</option>-->
+<!--                            </select>-->
+<!--                            <div class="valid-feedback">-->
+<!--                                انتخاب معتبر است.-->
+<!--                            </div>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                این فیلد اجباری است.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <div class="form-group">-->
+<!--                            <span class="form-label">نشانی ایمیل ولی</span>-->
+<!--                            <input type="text" class="form-control" id="guardianEmail" name="guardianEmail" required>-->
+<!--                            <div class="valid-feedback">-->
+<!--                                نشانی ایمیل معتبر است.-->
+<!--                            </div>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                این فیلد اجباری است.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <div class="form-group">-->
+<!--                            <span class="form-label">شماره واتساپ ولی</span>-->
+<!--                            <input type="text" class="form-control" id="guardianWhatsapp" name="guardianWhatsapp"-->
+<!--                                   required>-->
+<!--                            <div class="valid-feedback">-->
+<!--                                شماره واتساپ ولی معتبر است.-->
+<!--                            </div>-->
+<!--                            <div class="invalid-feedback">-->
+<!--                                این فیلد اجباری است.-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="study-details part-separate">-->
+<!--                <p class="section-title">معلومات درسی</p>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <span class="form-label">لطفا مضمون مورد نظر خود را انتخاب نمایید</span>-->
+<!--                        <select class="form-control" id="subjectOptions" name="subjectOptions" required>-->
+<!--                            <option value="">انتخاب کنید...</option>-->
+<!--                            <option value="row-khowani">روخوانی قرآن کریم</option>-->
+<!--                            <option value="tajwid">تجوید و حسن قرائت</option>-->
+<!--                            <option value="hefz">حفظ قرآن کریم</option>-->
+<!--                            <option value="tafsir">تفسیر و ترجمه قرآن کریم</option>-->
+<!--                            <option value="feqh">فقه اسلامی</option>-->
+<!--                            <option value="aqayed">عقاید اسلامی</option>-->
+<!--                        </select>-->
+<!--                        <div class="valid-feedback">-->
+<!--                            انتخاب معتبر است.-->
+<!--                        </div>-->
+<!--                        <div class="invalid-feedback">-->
+<!--                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <span class="form-label">با کدام زبان می خواهید درس بخوانید</span>-->
+<!--                        <select class="form-control" id="languageOptions" name="languageOptions" required>-->
+<!--                            <option value="">انتخاب کنید...</option>-->
+<!--                            <option value="persian">فارسی</option>-->
+<!--                            <option value="pashto">پشتو</option>-->
+<!--                        </select>-->
+<!--                        <div class="valid-feedback">-->
+<!--                            انتخاب معتبر است.-->
+<!--                        </div>-->
+<!--                        <div class="invalid-feedback">-->
+<!--                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                <span for="time-input" class="inline-label">-->
+<!--                    تایم درسی تان را مطابق وقت محلی و کشور خود انتخاب نمایید-->
+<!--                </span>-->
+<!--                        <input type="time" class="form-control" id="classtimeOptions" name="classtimeOptions" required>-->
+<!--                        <div class="valid-feedback">-->
+<!--                            انتخاب معتبر است.-->
+<!--                        </div>-->
+<!--                        <div class="invalid-feedback">-->
+<!--                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-6 col-md-12 col-sm-12">-->
+<!--                        <span class="form-label">مدرسه انوارالقرآن را در کجا یافتید ?</span>-->
+<!--                        <select class="form-control" id="findwhereOptions" name="findwhereOptions" required>-->
+<!--                            <option value="">انتخاب کنید...</option>-->
+<!--                            <option value="google">گوگل</option>-->
+<!--                            <option value="facebook">فیسبوک</option>-->
+<!--                            <option value="other-social-media">سایر صفحات اجتماعی</option>-->
+<!--                            <option value="friends-invite">دعوت دوستان</option>-->
+<!--                        </select>-->
+<!--                        <div class="valid-feedback">-->
+<!--                            انتخاب معتبر است.-->
+<!--                        </div>-->
+<!--                        <div class="invalid-feedback">-->
+<!--                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="rules part-separate">-->
+<!--                <p class="section-title">قوانین مدرسه</p>-->
 
-
-            <div class="study-details part-separate">
-                <p class="section-title">معلومات درسی</p>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <span class="form-label">لطفا مضمون مورد نظر خود را انتخاب نمایید</span>
-                        <select class="form-control" id="subject-options" required>
-                            <option value="">انتخاب کنید...</option>
-                            <option value="Option1">روخوانی قرآن کریم</option>
-                            <option value="Option2">تجوید و حسن قرائت</option>
-                            <option value="Option3">حفظ قرآن کریم</option>
-                            <option value="Option3">تفسیر و ترجمه قرآن کریم</option>
-                        </select>
-                        <div class="valid-feedback">
-                            انتخاب معتبر است.
-                        </div>
-                        <div class="invalid-feedback">
-                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <span class="form-label">با کدام زبان می خواهید درس بخوانید</span>
-                        <select class="form-control" id="lan-options" required>
-                            <option value="">انتخاب کنید...</option>
-                            <option value="Option1">فارسی</option>
-                            <option value="Option2">پشتو</option>
-                        </select>
-                        <div class="valid-feedback">
-                            انتخاب معتبر است.
-                        </div>
-                        <div class="invalid-feedback">
-                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                <span for="time-input" class="inline-label">
-                    تایم درسی تان را مطابق وقت محلی و کشور خود انتخاب نمایید
-                </span>
-                        <input type="time" class="form-control" id="time-input" required>
-                        <div class="valid-feedback">
-                            انتخاب معتبر است.
-                        </div>
-                        <div class="invalid-feedback">
-                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <span class="form-label">مدرسه انوارالقرآن را در کجا یافتید ?</span>
-                        <select class="form-control" id="where-options" required>
-                            <option value="">انتخاب کنید...</option>
-                            <option value="Option1">گوگل</option>
-                            <option value="Option2">فیسبوک</option>
-                            <option value="Option3">سایر صفحات اجتماعی</option>
-                            <option value="Option3">دعوت دوستان</option>
-                        </select>
-                        <div class="valid-feedback">
-                            انتخاب معتبر است.
-                        </div>
-                        <div class="invalid-feedback">
-                            این فیلد اجباری است. لطفاً یک مورد را انتخاب کنید.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rules part-separate">
-                <p class="section-title">قوانین مدرسه</p>
-
-                <p>1: دانش آموز باید به وقت معینه حاضر به درس باشد</p>
-                <p>2: در صورت عدم اشتراک به صنف؛ دانش آموز باید مدیر مدرسه را از قبل در جریان بگذارد</p>
-                <p>3: دانش آموز مکلف است تا فیس را در وقت معین بپردازد</p>
-                <br>
-                <div class="form-check form-check-inline rule-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">قوانین را با دقت مطالعه نموده و آنرا می
-                        پذیرم</label>
-                    <div class="valid-feedback">
-                        تایید شده!
-                    </div>
-                    <div class="invalid-feedback">
-                        شما باید با قوانین موافقت کنید.
-                    </div>
-                </div>
-            </div>
+<!--                <p>1: دانش آموز باید به وقت معینه حاضر به درس باشد</p>-->
+<!--                <p>2: در صورت عدم اشتراک به صنف؛ دانش آموز باید مدیر مدرسه را از قبل در جریان بگذارد</p>-->
+<!--                <p>3: دانش آموز مکلف است تا فیس را در وقت معین بپردازد</p>-->
+<!--                <br>-->
+<!--                <div class="form-check form-check-inline rule-check">-->
+<!--                    <input class="form-check-input" type="checkbox" value="" id="invalidCheckbox" name="invalidCheckbox"-->
+<!--                           required>-->
+<!--                    <label class="form-check-label" for="invalidCheckbox">قوانین را با دقت مطالعه نموده و آنرا می-->
+<!--                        پذیرم</label>-->
+<!--                    <div class="invalid-feedback">-->
+<!--                        شما باید با قوانین موافقت کنید.-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="col-md-12">
                 <button class="btn main-btn" type="submit">ثبت نام</button>
             </div>
         </form>
+
     </div>
 </div>
 

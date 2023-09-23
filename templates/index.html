@@ -39,27 +39,27 @@
                         class="navbar-brand" href="#">
                     <img src="../static/images/logo.png" alt="لوگو مدرسه انوار القرآن">
                 </a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <!--<span class="navbar-toggler-icon"></span>-->
-                    <i class="fas fa-stream navbar-toggler-icon"></i>
-                </button>
+                <!--                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"-->
+                <!--                        data-bs-target="#navbarNav"-->
+                <!--                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+                <!--                    &lt;!&ndash;<span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+                <!--                    <i class="fas fa-stream navbar-toggler-icon"></i>-->
+                <!--                </button>-->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto mr-auto text-left">
-                        <li class="nav-item">
-                            <a class="nav-link hero-nav-link" aria-current="page" href="#hero_section">صفحه اصلی</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link q&a-nav-link" href="{{ url_for('qa_library')}}">سوال و جواب شرعی</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link library-nav-link" href="{{url_for('qa_library')}}">کتابخانه</a>
-                        </li>
-                    </ul>
+                    <!--                    <ul class="navbar-nav mx-auto mr-auto text-left">-->
+                    <!--                        <li class="nav-item">-->
+                    <!--                            <a class="nav-link hero-nav-link" aria-current="page" href="#hero_section">صفحه اصلی</a>-->
+                    <!--                        </li>-->
+                    <!--                        <li class="nav-item">-->
+                    <!--                            <a class="nav-link q&a-nav-link" href="{{ url_for('qa_library')}}">سوال و جواب شرعی</a>-->
+                    <!--                        </li>-->
+                    <!--                        <li class="nav-item">-->
+                    <!--                            <a class="nav-link library-nav-link" href="{{url_for('qa_library')}}">کتابخانه</a>-->
+                    <!--                        </li>-->
+                    <!--                    </ul>-->
+                    <a id="registrationButton" class="btn main-btn"
+                       href="{{url_for('register_form')}}">ثبت نام</a>
                 </div>
-                <a id="registrationButton" class="btn main-btn"
-                   href="{{url_for('register_form')}}">ثبت نام</a>
             </nav>
         </div>
     </div>
@@ -157,7 +157,8 @@
                                 <br>
                                 <br>
                                 مدرسه انوار القرآن با داشتن محیط آرام و آموزشی، استادان مجرب و ورزیده از قشر ذکور و
-                                اناث؛ با داشتن تجربه « ١٥ » سال در بخش آموزش حضوری و <br>« ٤ » سال در بخش آموزش آنلاین با بهترین
+                                اناث؛ با داشتن تجربه « ١٥ » سال در بخش آموزش حضوری و <br>« ٤ » سال در بخش آموزش آنلاین
+                                با بهترین
                                 امکانات درسی در خدمت شما عزیزان متدین قرار دارد.
                             </p>
                         </div>
@@ -288,25 +289,13 @@
                         <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
+                            قرآن را یاد نداشتم از زمانیکه دراین مدرسه درس میخوانم قرآن را خوب یاد گرفتم .
+                            تشکری میکنم از رهبری این نهاد که امکانات آموزش قرآنکریم را برای افغانهای خارج از کشوربه
+                            بهترین شکل مساعد نموده اند.
+
                         </p>
-                        <h4>1عبدالمبین فتی</h4>
-                        <span>از افغانستان</span>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-profile-column">
-                    <div class="profile">
-                        <img src="../static/images/testimonial/testimonial-girl.jpg"
-                             alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
-                        <p>
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
-                        </p>
-                        <h4>عبدالمبین فتی2</h4>
-                        <span>از افغانستان</span>
+                        <h4>مسعود اصغری</h4>
+                        <span>اتریش</span>
                     </div>
                 </div>
             </div>
@@ -316,11 +305,13 @@
                         <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
+                            خیلی دوست داشتم که قرآن کریم را یاد بگیرم اصلا با حروف قرآن بلد نبودم یگانه نهادی که مرا به
+                            آرزویم رساند مدرسه انوار القرآن بود
+                            الحمدلله امروزخوب قرآن نی خوانم واز آن لذت میبرم .
+
                         </p>
-                        <h4>3عبدالمبین فتی</h4>
-                        <span>از افغانستان</span>
+                        <h4>تمکین</h4>
+                        <span>آمریکا</span>
                     </div>
                 </div>
             </div>
@@ -330,11 +321,11 @@
                         <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
+                            در مورد اسلام اطلاعات کم داشتم اززمانیکه با مدرسه انوار القرآن آشنا اطلاعاتم در مورد دین
+                            مقدس اسلام بیشترشده والحمدلله افتخار می نمایم که مسلمان وپیرو دین مقدس اسلام هستم.
                         </p>
-                        <h4>4عبدالمبین فتی</h4>
-                        <span>از افغانستان</span>
+                        <h4>نگار</h4>
+                        <span>امریکا</span>
                     </div>
                 </div>
             </div>
@@ -344,11 +335,71 @@
                         <img src="../static/images/testimonial/testimonial-girl.jpg"
                              alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
                         <p>
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری یکی از شاگردان که آنلاین درس می خواند
-                            تصویری یکی از شاگردان که آنلاین درس می خواندتصویری
+                            قرآن را یاد داشتم ولی در آن مهارت نداشتم زمانیکه دروس مدرسه انوارالقرآن را تعقیب نمودم خصوصا
+                            علم تجوید را فرا گرفتم الحمدلله امروز قرآن راخیلی خوب قرائت می توانم واز مسائل فقهی نیز آگاه
+                            شده ام.
                         </p>
-                        <h4>5عبدالمبین فتی</h4>
-                        <span>از افغانستان</span>
+                        <h4>تهمینه</h4>
+                        <span>انگلستان</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial-profile-column">
+                    <div class="profile">
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
+                             alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
+                        <p>
+                            قرآن کریم را می خواندم ولی شوق داشتم که علم تجوید را نیر فرا بگیرم الحمدلله حالا قرآن کریم
+                            را با تجوید می خوانم واز مسائل فقهی وعقیدتی نیز آگاهی حاصل نموده ام .
+                        </p>
+                        <h4>مومنه</h4>
+                        <span>انگلستان</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial-profile-column">
+                    <div class="profile">
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
+                             alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
+                        <p>
+                            خانواده ام تلاوتم را خیلی خوش داشتند ومرا تشویق می نمودند زمانیکه دروس را در مدرسه
+                            انوارالقرآن آغاز نمودم درتلاوتم تغییرات مثبت را احساس نمودم الحمدلله حالا قرآنکریم را خیلی
+                            خوب تلاوت می نمایم واز رهبری مدرسه انوار القرآن اظهار تشکری می نمایم
+                        </p>
+                        <h4>زینب</h4>
+                        <span>انگلستان</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial-profile-column">
+                    <div class="profile">
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
+                             alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
+                        <p>
+                            دروس تجوید را در مدرسه انوار القرآن فرا گرفتم آنچه که در دوران آموزش مشاهده نمودم میتودها
+                            وروشهای زیبا -استادان مجرب وورزیده -انترنت خوب -آن تایم بودن – تشویق وارائه دروس بشکل درست
+                            وزیبا
+                        </p>
+                        <h4>داکتر عبدالبصیر خالد هوتک</h4>
+                        <span>افغانستان</span>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial-profile-column">
+                    <div class="profile">
+                        <img src="../static/images/testimonial/testimonial-girl.jpg"
+                             alt="تصویری یکی از شاگردان که آنلاین درس می خواند" class="student-image">
+                        <p>
+                            فرزندانم قرآنکریم را یاد نداشتند از زمانیکه دروس را در مدرسه انوار القرآن فرا گرفته اند
+                            قرآنکریم
+                            را به صورت زیبا می خوانند وازبسیاری مسائل دینی نیز آگاه شده اند.
+                        </p>
+                        <h4>عایشه عسکری</h4>
+                        <span>آمریکا</span>
                     </div>
                 </div>
             </div>
@@ -377,11 +428,14 @@
                 <p class="mb-4 ps-0 company-details">مرکز آموزش علوم اسلامی بصورت حضوری و آنلاین</p>
                 <div class="contact-info">
                     <ul class="list-unstyled">
-                        <li><a href="https://maps.app.goo.gl/KBKajww8QWxBDp6H8"><i class="fa fa-home me-3"></i>کوچه ریاست ترافیک، دهمزنگ، کابل، افغانستان</a>
+                        <li><a href="https://maps.app.goo.gl/KBKajww8QWxBDp6H8"><i class="fa fa-home me-3"></i>کوچه
+                            ریاست ترافیک، دهمزنگ، کابل، افغانستان</a>
                         </li>
                         <li><a href="tel:+93798182521"><i class="fa fa-phone me-3"></i>521 8182 79 93+</a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=0093798182521"><i class="fab fa-whatsapp me-3"></i>521 8182 79 93+</a></li>
-                        <li><a href="mailto:anwarulquran1402@gmail.com"><i class="fa fa-envelope me-3"></i>anwarulquran1402@gmail.com</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=0093798182521"><i
+                                class="fab fa-whatsapp me-3"></i>521 8182 79 93+</a></li>
+                        <li><a href="mailto:anwarulquran1402@gmail.com"><i class="fa fa-envelope me-3"></i>anwarulquran1402@gmail.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -397,10 +451,12 @@
             </div>
             <div class="col-lg-3 col-md-12 col-sm-12 mb-5 mb-lg-0">
                 <div class="d-flex flex-column align-items-start align-items-xl-center">
-                    <a href="#hero_section"> <img class="footer-image" alt="لوگوی مدرسه انوار القرآن" src="../static/images/logo.png"></a>
+                    <a href="#hero_section"> <img class="footer-image" alt="لوگوی مدرسه انوار القرآن"
+                                                  src="../static/images/logo.png"></a>
                     <h5>همیشه با خبر باشید</h5>
                     <ul class="social-network d-flex align-items-center p-0 order-md-last">
-                        <li><a href="https://api.whatsapp.com/send?phone=0093798182521" class="fab fa-whatsapp"><i></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=0093798182521" class="fab fa-whatsapp"><i></i></a>
+                        </li>
                         <li><a href="https://www.facebook.com/Anwaar2020" class="fab fa-facebook-f"><i></i></a></li>
                         <li><a href="skype:?chat" class="fab fa-skype"><i></i></a></li>
                         <!-- <li><a href="" class="fab fa-youtube"><i></i></a></li> -->
