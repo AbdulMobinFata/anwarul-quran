@@ -262,14 +262,15 @@ section{
 }
 
 .hero_section .text-content{
-    padding-top: 28%;
+    padding-top: 40%;
     padding-right: 0;
+    margin-right: 0;
 }
 
 .hero_section .text-content h1{
     display: inline;
     color: var(--dark-color);
-    font-size: 8rem;
+    font-size: 6.5rem;
 }
 
 .hero_section .text-paragraph p{
@@ -279,15 +280,14 @@ section{
     display: block;
     color: white;
     font-weight: bold;
-    font-size: 2rem;
-    width: 72%;
-    margin-top: 4rem;
+    font-size: 1.8rem;
+    width: 80%;
+    margin-top: 3rem;
 }
 
 .hero-image{
-    padding-top: 20%;
-    padding-left: 0;
-    height: 90vh;
+    margin-top: 20%;
+    margin-right: 20%;
 }
 
 /*Count section*/
@@ -415,7 +415,7 @@ section{
     width: 90%;
 }
 
-.carousel-item .profile img {
+.carousel-item .profile>img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -429,6 +429,8 @@ section{
 .carousel-item .profile p {
     margin: 50px 0;
     font-size: 2.2rem;
+    word-spacing: 3px;
+
 }
 
 .carousel-item .profile h4 {
@@ -436,8 +438,11 @@ section{
     margin-bottom: 1.2rem;
 }
 
-.carousel-item .profile span {
-    font-size: 1.8rem;
+.carousel-item .bottom-content img {
+    height: 30px;
+    width: 50px;
+    margin-top: 15px;
+    border-radius: 5px;
 }
 
 .carousel-button .carousel-control-prev i,
