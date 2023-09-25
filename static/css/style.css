@@ -257,9 +257,6 @@ section{
 }
 
 /*hero section*/
-.hero_section{
-    min-height: 100vh;
-}
 
 .hero_section .text-content{
     padding-top: 40%;
