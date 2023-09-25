@@ -14,11 +14,6 @@
         padding: 0 1.2rem;
         margin: 0 0;
     }
-
-    /*hero section*/
-    .hero_section {
-        min-height: 100vh;
-    }
 }
 
 @media (max-width: 1400px) {
@@ -34,12 +29,6 @@
         font-size: 1.4rem;
     }
 
-}
-
-@media (max-width: 1024px) {
-    .hero_section {
-        height: 100px;
-    }
 }
 
 /*Media Query 991px*/
@@ -121,12 +110,6 @@
     /*count section*/
     .counts_section {
         padding-top: 0;
-    }
-
-    /*hero section*/
-    .hero_section {
-        height: 140vh;
-        padding-bottom: 0;
     }
 
     .hero_section .text-content {

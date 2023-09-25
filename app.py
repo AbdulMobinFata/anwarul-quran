@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template
 import datetime
 # from models.database import Registration_data
 # from flask_sqlalchemy import SQLAlchemy
