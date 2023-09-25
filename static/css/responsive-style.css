@@ -175,4 +175,7 @@
         margin: 0;
         padding: 0;
     }
+    .copyright_section p{
+        font-size: 1.5rem;
+    }
 }
