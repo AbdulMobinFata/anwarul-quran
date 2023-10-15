@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e17b7237-681f-4d73-a7b8-a1f4495e5c21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Main-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/MainPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/RegistrationForm/EmailInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/MadrasaProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MadrasaProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend" beforeDir="false" afterPath="$PROJECT_DIR$/frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
@@ -26,33 +23,6 @@
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/404page-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/comingSoon-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/register-form-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/responsive-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/BYekan+.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/icon/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/404pageGIF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/about/about-banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/banner-slide/m3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/commigSoon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/flags/af-flag.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/flags/au-flag.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/flags/uk-flag.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/flags/us-flag.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/footer-bg/footer_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/header-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/testimonial/testimonial-girl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/register-form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/other_pages/404-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/other_pages/coming-soon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/other_pages/register-form.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +39,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2VtQgtbfztOkizPlEFGDTwfBKkd" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -79,9 +52,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -89,10 +65,15 @@
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.JavaScript&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.HTML&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MadrasaProject\frontend\src\assets\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MadrasaProject" type="PythonConfigurationType" factoryName="Python">
       <module name="MadrasaProject" />
@@ -130,7 +111,15 @@
       <workItem from="1695985861547" duration="11000" />
       <workItem from="1695985882963" duration="998000" />
       <workItem from="1695986898233" duration="2200000" />
-      <workItem from="1695999820472" duration="71000" />
+      <workItem from="1695999820472" duration="6163000" />
+      <workItem from="1696050835296" duration="6927000" />
+      <workItem from="1696070628668" duration="2702000" />
+      <workItem from="1696164609926" duration="2988000" />
+      <workItem from="1696220869491" duration="8986000" />
+      <workItem from="1697299434713" duration="881000" />
+      <workItem from="1697300484885" duration="3218000" />
+      <workItem from="1697304046294" duration="3235000" />
+      <workItem from="1697344932860" duration="318000" />
     </task>
     <servers />
   </component>
